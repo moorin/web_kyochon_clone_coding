@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>box-sizing</title>
+  <style>
+    .box{
+      width: 600px;
+      height: 100px;
+      background-color: lightblue;
+      border: 10px solid #000;
+      padding: 20px;
+      box-sizing: border-box;
+      /* width 600px 안에 들어오게 해라 padding이랑 border가 */
+    }
+    .container {
+      border: 1px solid #000;
+      width: 900px;
+      margin: auto;
+      /* block 요소 가운데 정렬 */
+    }
+    .container div {
+      background-color: lightblue;
+      border: solid red;
+      width:300px;
+      height: 300px;
+      float: left;
+      box-sizing: border-box;
+    }
+  </style>
+</head>
+<body>
+  <!-- <div class="box">box-sizing: border-box;</div> -->
+  <div class="container">
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+</body>
+</html>

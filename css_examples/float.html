@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>float</title>
+  <style>
+    .container{
+      border: 2px solid blue;
+      width: 1200px;
+      margin: auto;
+    }
+    header {
+      border: 2px solid red;
+      height: 150px;
+      /* 글씨 중앙 */
+      line-height: 150px;
+      text-align: center;
+    }
+    .inner div {
+      border: 1px solid green;
+      padding: 20px;
+      width: 400px;
+      height: 400px;
+      /* 1번 */
+      float: left;
+      /* 2번 */
+      box-sizing: border-box;
+    }
+    footer {
+      border: 1px solid orange;
+      height: 100px;
+      /* 3번
+      float 다음에 나오는 것은
+      float 속성을 상속 받기 때문에 float left가 됨
+      그래서 clear both 해줘야함 */
+      clear: both;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>header</header>
+    <div class="inner">
+      <div>section1</div>
+      <div>section2</div>
+      <div>section3</div>
+    </div>
+    <footer>footer</footer>
+  </div>
+</body>
+</html>
